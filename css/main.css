@@ -67,6 +67,7 @@ h4, h5, h6 { font-size: 1em;}
 p, ul, ol, a { font-size: 1em; color: #666}
 header {
     max-width: 960px;
+    height: 100px;
 }
 a {
     text-decoration: none;
@@ -80,22 +81,24 @@ nav.mini-top-nav {
     font-size: 0.75em;
     font-weight: 600;
     margin-top: 1em;
+    margin-bottom: 0.25em;
     padding-bottom: 1px;
 }
 nav.mini-top-nav a {
     display: inline-block;
     padding: 0.5em;
 }
+nav.mini-top-nav a.omega {
+    padding-right: 0;
+}
 nav.main-nav {
+    display: block;
     float: right;
-    clear: right;
-    padding-top: 1px;
-    padding-bottom: 1px;
     margin-bottom: 1em;
 }
 nav.main-nav a {
     display: inline-block;
-    padding: 0.75em;
+    padding: 0.65em;
     font-weight: 600;
     letter-spacing: 1px;
 }
@@ -195,7 +198,7 @@ footer {
     text-align: center;
     background-image: url("../img/icon_back.png");
     background-size: 100%;
-    background-position: 0px 0px;
+    background-position: 0 0;
     background-repeat: no-repeat;
     text-transform: uppercase;
     font-size: 0.75em;
