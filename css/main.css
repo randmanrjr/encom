@@ -1,0 +1,354 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Site specific styles */
+html {
+    background-color: gray;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+body {
+    background-color: #ffffff;
+    max-width: 1280px;
+    margin: 1em auto;
+    box-shadow: 0px 0px 10px;
+    padding-bottom: 1px;
+}
+h1 { font-size: 1.5em; color: #000000}
+h2 {font-size: 1.25em;}
+h3 {font-size: 1.125em;}
+h4, h5, h6 { font-size: 1em;}
+p, ul, ol, a { font-size: 1em; color: #666}
+header {
+    max-width: 960px;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+section, hgroup, div {
+    text-align: center;
+}
+nav.mini-top-nav {
+    float: right;
+    font-size: 0.75em;
+    font-weight: 600;
+    margin-top: 1em;
+    padding-bottom: 1px;
+}
+nav.mini-top-nav a {
+    display: inline-block;
+    padding: 0.5em;
+}
+nav.main-nav {
+    float: right;
+    clear: right;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin-bottom: 1em;
+}
+nav.main-nav a {
+    display: inline-block;
+    padding: 0.75em;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+nav.main-nav a.see-it-in-action {
+    background-color: #3cbb71;
+    border-radius: 10px;
+    color: #ffffff;
+}
+nav.main-nav a.see-it-in-action:hover {
+    background-color: #a36fac;
+}
+main {
+    max-width: 1280px;
+    padding-bottom: 1px;
+}
+#top-focus {
+    max-width: 1280px;
+    margin: 0 auto;
+    background-color: #35a665;
+    color: #ffffff;
+    text-align: center;
+}
+#top-focus h1 {
+    font-size: 2em;
+    margin: 1em;
+    margin-top: 2em;
+    font-weight: 300;
+    color: #ffffff;
+}
+#top-focus p {
+    color: #ffffff;
+}
+#top-focus section.clearfix {
+
+}
+#top-focus section p.grid-10 {
+    font-size: 1.25em;
+    font-weight: 300;
+    line-height: 1.5em;
+    margin-bottom: 3em;
+    letter-spacing: 0.5px;
+}
+div.slidernav {
+    height: 50px;
+    background-color: #3cbb71;
+}
+main div.slider {
+    width: 100%;
+    overflow-x: hidden;
+}
+main div.slider img {
+    min-height: 496px;
+    min-width: 1280px;
+    height: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+@media screen and (max-width: 1280px) {
+    main div.slider img {
+        left: 50%;
+        margin-left: -640px;
+    }
+}
+header,
+#top-focus section,
+#advantages,
+#partners,
+footer {
+    margin: 0 auto;
+}
+#advantages p, #partners p {
+    font-size: 0.95em;
+    font-weight: 300;
+    line-height: 1.5;
+}
+#advantages {
+    padding-top: 1px;
+    text-align: center;
+}
+#advantages div {
+    text-align: center;
+}
+#advantages h1 {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    font-weight: 600;
+    text-align: center;
+}
+#advantages a.icon {
+    display: inline-block;
+    height: 128px;
+    width: 128px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 3em;
+    text-align: center;
+    background-image: url("../img/icon_back.png");
+    background-size: 100%;
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    text-transform: uppercase;
+    font-size: 0.75em;
+    font-weight: 700;
+}
+#advantages a.icon:hover {
+    color: #b78bbf;
+}
+#advantages a.icon img {
+    margin-bottom: 1em;
+}
+#advantages p.grid-6.push-3 {
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+#partners h1 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+#partners p {
+    margin-bottom: 3em;
+}
+footer {
+    margin-top: 10em;
+    margin-bottom: 8em;
+}
+footer hgroup h1 {
+    font-size: 1.25em;
+    margin-bottom: 0.75em;
+    font-weight: 600;
+}
+footer hgroup h2 {
+    font-size: 1.125em;
+    margin-bottom: 1.5em;
+    font-weight: 600;
+}
+footer div.grid-4.push-4 {
+    margin-bottom: 1em;
+}
+footer div a.socialicon {
+    margin-left: 6px;
+    margin-right: 6px;
+}
+footer span {
+    font-size: 0.75em;
+    color: #333333;
+    margin-bottom: 5em;
+    padding-bottom: 1px;
+}
+footer nav {
+    font-size: 0.75em;
+    margin-bottom: 1em;
+}
+footer nav a {
+    color: #a36fac;
+}
+.grid-max {
+    max-width: 960px;
+}
+/* clearfix */
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.clear {
+    clear: both;
+}
+.center {
+    text-align: center;
+}
+/* @group responsive grid classes */
+
+.grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6,
+.grid-7, .grid-8, .grid-9, .grid-10, .grid-11, .grid-12 {margin-right: 1.103752759382%; margin-left: 1.103752759382%; float: left;
+}
+
+.alpha {margin-left: 0;}
+
+.omega {margin-right: 0;}
+
+.grid-1{width: 6.25%;}
+.grid-2 {width: 14.583333333333%;}
+.grid-3 {width: 22.916666666667%;}
+.grid-4 {width: 31.25%;}
+.grid-5 {width: 39.583333333333%;}
+.grid-6 {width: 47.916666666667%;}
+.grid-7 {width: 56.25%;}
+.grid-8 {width: 64.583333333333%;}
+.grid-9 {width: 72.916666666667%;}
+.grid-10 {width: 81.25%;}
+.grid-11 {width: 89.583333333333%;}
+.grid-12 {width: 97.916666666667%;}
+
+.prefix-1 {padding-left: 8.333333333333%;}
+.prefix-2 {padding-left: 16.666666666667%;}
+.prefix-3 {padding-left: 25%;}
+.prefix-4 {padding-left: 33.333333333333%;}
+.prefix-5 {padding-left: 41.666666666667%;}
+.prefix-6 {padding-left: 50%;}
+.prefix-7 {padding-left: 58.333333333333%;}
+.prefix-8 {padding-left: 66.666666666667%;}
+.prefix-9 {padding-left: 75%;}
+.prefix-10 {padding-left: 83.333333333333%;}
+.prefix-11 {padding-left: 91.666666666667%;}
+
+.push-1, .pull-1,
+.push-2, .pull-2,
+.push-3, .pull-3,
+.push-4, .pull-4,
+.push-5, .pull-5,
+.push-6, .pull-6,
+.push-7, .pull-7,
+.push-8, .pull-8,
+.push-9, .pull-9,
+.push-10, .pull-10,
+.push-11, .pull-11,
+.push-12, .pull-12 {
+    position: relative;
+}
+
+/* @group push */
+
+.push-1 {left: 8.333333333333%;}
+.push-2 {left: 16.666666666667%;}
+.push-3 {left: 25%;}
+.push-4 {left: 33.333333333333%;}
+.push-5 {left: 41.666666666667%;}
+.push-6 {left: 50%;}
+.push-7 {left: 58.333333333333%;}
+.push-8 {left: 66.666666666667%;}
+.push-9 {left: 75%;}
+.push-10 {left: 83.333333333333%;}
+.push-11 {left: 91.666666666667%;}
+
+/* @end */
+
+/* @group pull */
+
+.pull-1 {left: -80px;}
+.pull-2 {left: -160px;}
+.pull-3 {left: -240px;}
+.pull-4 {left: -320px;}
+.pull-5 {left: -400px;}
+.pull-6 {left: -480px;}
+.pull-7 {left: -560px;}
+.pull-8 {left: -640px;}
+.pull-9 {left: -720px;}
+.pull-10 {left: -800px;}
+.pull-11 {left: -880px;}
+
+/* @end */
+
+
+/* @end */
