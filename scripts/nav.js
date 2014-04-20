@@ -12,10 +12,10 @@ $(function(){
             width: "170px"
         }, 100).css({
             backgroundImage: 'url("img/icon_back_hover.png")'
-        }).children().attr({
+        }).children('img').attr({
             src: newSrc
         }).css({
-            marginBottom: "2em",
+            marginBottom: "32px",
             position: 'relative',
             top: '21px'
         });
@@ -30,7 +30,7 @@ $(function(){
             width: "128px"
         }, 100).css({
             backgroundImage: 'url("img/icon_back.png")'
-        }).children().attr({
+        }).children('img').attr({
             src: newSrc
         }).css({
             marginBottom: "0",

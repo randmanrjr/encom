@@ -309,6 +309,7 @@ footer {
     display: inline-block;
     height: 100%;
     max-height: 200px;
+    margin-bottom: 1em;
 }
 #advantages a.icon {
     display: inline-block;
@@ -477,71 +478,7 @@ footer nav a {
     #advantages div {
         height: auto;
         max-height: none;
-        margin-bottom: 3em;
-    }
-    #advantages p,
-    #partners p,
-    #partners div.grid-12,
-    footer {
-        display: none;
-    }
-}
-@media only screen
-and (min-device-width : 320px)
-and (max-device-width : 568px) {
-    body {
-        margin: 0;
-        box-shadow: none;
-    }
-    header {
-        height: 75px;
-    }
-    header img {
-        height: 75px;
-        margin-left: 9.37%;
-    }
-    header nav.mini-top-nav,
-    header nav.main-nav {
-        display: none;
-    }
-    #top-focus section.slider {
-        height: 355px;
-    }
-    #top-focus section.slides {
-        height: 325px;
-    }
-    #top-focus div.article-wrapper {
-        height: 325px;
-    }
-    #top-focus a.button {
-        display: none;
-    }
-    #top-focus h1 {
-        font-size: 1.5em;
-        font-weight: 400;
-    }
-    #top-focus section p.grid-10 {
-        font-size: 1.125em;
-    }
-    #top-focus article.article_slide--first p,
-    #top-focus article.article_slide--second p,
-    #top-focus article.article_slide--third p {
-        font-size: 1em;
-    }
-    .slider-arrow {
-        display: none;
-    }
-    .slider-nav {
-        bottom: 8px;
-    }
-    #partners h1.grid-8.push-2 {
-        left: 8.333333333333%;
-        width: 81.25%;
-    }
-    #advantages div {
-        height: auto;
-        max-height: none;
-        margin-bottom: 3em;
+        margin-bottom: 1em;
     }
     #advantages p,
     #partners p,
@@ -615,6 +552,10 @@ and (max-device-width : 568px) {
 .push-11 {left: 91.666666666667%;}
 
 /* @end */
+
+/* values below are in pixels and represent
+ the 12 column fractions of the 960 grid system;
+ the fluid grid values above are calculated from these */
 
 /* @group pull */
 
