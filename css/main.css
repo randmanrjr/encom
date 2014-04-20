@@ -56,6 +56,7 @@ html {
 body {
     background-color: #ffffff;
     max-width: 1280px;
+    min-width: 320px;
     margin: 1em auto;
     box-shadow: 0px 0px 10px;
     padding-bottom: 1px;
@@ -75,6 +76,12 @@ a {
 }
 section, hgroup, div {
     text-align: center;
+}
+header span.menu-trigger {
+    display: none;
+}
+header.mobile-menu {
+    display: none;
 }
 nav.mini-top-nav {
     float: right;
@@ -103,12 +110,12 @@ nav.main-nav a {
     letter-spacing: 1px;
 }
 nav.main-nav a.see-it-in-action {
-    background-color: #3cbb71;
+    background-color: #a36fac;
     border-radius: 10px;
     color: #ffffff;
 }
 nav.main-nav a.see-it-in-action:hover {
-    background-color: #a36fac;
+    background-color: #3cbb71;
 }
 main {
     max-width: 1280px;
@@ -131,8 +138,137 @@ main {
 #top-focus p {
     color: #ffffff;
 }
-#top-focus section.clearfix {
+#top-focus section.slider {
+    background-color: #3cbb71;
+    height: 546px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+#top-focus section.slides {
+    height: 496px;
+    overflow: hidden;
+}
+.article_slide {
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.article_slide--first {
+    background-image: url("../img/slider.png");
+}
+.article_slide--second {
+    background-image: url("../img/slider.png");
+}
+.article_slide--third {
+    background-image: url("../img/slider.png");
+}
+div.article-wrapper {
+    clear: both;
+    position: relative;
+    height: 496px;
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+}
+#top-focus article.article_slide--first h1,
+#top-focus article.article_slide--second h1,
+#top-focus article.article_slide--third h1 {
+    text-align: left;
+    margin-bottom: 5em;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+#top-focus article.article_slide--first p,
+#top-focus article.article_slide--second p,
+#top-focus article.article_slide--third p {
+    font-size: 1.25em;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+    text-align: left;
+    margin-bottom: 2em;
+}
+#top-focus a.button {
+    color: #ffffff;
+    background-color: #3cbb71;
+    padding: 0.65em;
+    border-radius: 10px;
+}
+#top-focus a.button:hover {
+    background-color: #a36fac;
+}
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
 
+.slides {
+    height: 100%;
+    /* Clear fix */
+    overflow: hidden;
+    *zoom: 1;
+    /**
+     * Prevent blinking issue
+     * Not tested. Experimental.
+     */
+    -webkit-backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+}
+
+.slide {
+    height: 100%;
+    float: left;
+    clear: none;
+}
+
+.slider-arrow {
+    background-image: url("../img/glide-arrows.png");
+    width: 17px;
+    height: 28px;
+    position: absolute;
+    display: block;
+    margin-bottom: -20px;
+    padding: 0;
+    color: #ffffff;
+}
+
+.slider-arrow--right {
+    bottom: 50%;
+    right: 30px;
+    background-position: -17px 0;
+}
+
+.slider-arrow--left {
+    bottom: 50%;
+    left: 30px;
+    background-position: 0 0;
+}
+
+.slider-nav {
+    position: absolute;
+    bottom: 18px;
+}
+
+.slider-nav__item {
+    width: 14px;
+    height: 14px;
+    float: left;
+    clear: none;
+    display: block;
+    margin: 0 10px;
+    background: #2f8754;
+    border-radius: 14px;
+}
+
+.slider-nav__item:hover {
+    background: #ccc;
+}
+
+.slider-nav__item--current {
+    background: #fff;
 }
 #top-focus section p.grid-10 {
     font-size: 1.25em;
@@ -140,28 +276,6 @@ main {
     line-height: 1.5em;
     margin-bottom: 3em;
     letter-spacing: 0.5px;
-}
-div.slidernav {
-    height: 50px;
-    background-color: #3cbb71;
-}
-main div.slider {
-    width: 100%;
-    overflow-x: hidden;
-}
-main div.slider img {
-    min-height: 496px;
-    min-width: 1280px;
-    height: auto;
-    position: relative;
-    top: 0;
-    left: 0;
-}
-@media screen and (max-width: 1280px) {
-    main div.slider img {
-        left: 50%;
-        margin-left: -640px;
-    }
 }
 header,
 #top-focus section,
@@ -181,6 +295,9 @@ footer {
 }
 #advantages div {
     text-align: center;
+    margin-bottom: 1em;
+    height: 100%;
+    max-height: 200px;
 }
 #advantages h1 {
     margin-top: 2em;
@@ -188,13 +305,18 @@ footer {
     font-weight: 600;
     text-align: center;
 }
+#advantages div.icon-wrapper {
+    display: inline-block;
+    height: 100%;
+    max-height: 200px;
+}
 #advantages a.icon {
     display: inline-block;
     height: 128px;
     width: 128px;
     margin-left: 5px;
     margin-right: 5px;
-    margin-bottom: 3em;
+    margin-bottom: 2em;
     text-align: center;
     background-image: url("../img/icon_back.png");
     background-size: 100%;
@@ -208,15 +330,16 @@ footer {
     color: #b78bbf;
 }
 #advantages a.icon img {
-    margin-bottom: 1em;
+
 }
 #advantages p.grid-6.push-3 {
-    margin-top: 3em;
+    margin-top: 0;
     margin-bottom: 3em;
 }
 #partners h1 {
     margin-top: 1em;
     margin-bottom: 1em;
+    font-weight: 600;
 }
 #partners p {
     margin-bottom: 3em;
@@ -270,6 +393,162 @@ footer nav a {
 }
 .center {
     text-align: center;
+}
+/* media queries */
+
+@media screen and (max-width: 800px) {
+    body {
+        margin: 0;
+        box-shadow: none;
+    }
+    header {
+        height: 75px;
+    }
+    header img {
+        height: 75px;
+        margin-left: 9.37%;
+    }
+    header nav.mini-top-nav,
+    header nav.main-nav {
+        display: none;
+    }
+    header span.menu-trigger {
+        display: block;
+        float: right;
+        margin-right: 9.37%;
+        font-size: 1.25em;
+        font-weight: 600;
+        position: relative;
+        top: 25px;
+    }
+    header.mobile-menu {
+        height: auto;
+        background-color: #efefef;
+        color: #666666;
+        border-top: #3cbb71 5px solid;
+        border-bottom: #3cbb71 5px solid;
+    }
+    header.mobile-menu nav {
+        text-align: center;
+    }
+    header.mobile-menu nav a {
+        font-size: 1.125em;
+        margin: 0.5em auto;
+        display: block;
+        color: #666666;
+    }
+    header.mobile-menu nav a:hover {
+        color: #000000;
+    }
+    #top-focus section.slider {
+        height: 355px;
+    }
+    #top-focus section.slides {
+        height: 325px;
+    }
+    #top-focus div.article-wrapper {
+        height: 325px;
+    }
+    #top-focus a.button {
+        display: none;
+    }
+    #top-focus h1 {
+        font-size: 1.5em;
+        font-weight: 400;
+    }
+    #top-focus section p.grid-10 {
+        font-size: 1.125em;
+    }
+    #top-focus article.article_slide--first p,
+    #top-focus article.article_slide--second p,
+    #top-focus article.article_slide--third p {
+        font-size: 1em;
+    }
+    .slider-arrow {
+        display: none;
+    }
+    .slider-nav {
+        bottom: 8px;
+    }
+    #partners h1.grid-8.push-2 {
+        left: 8.333333333333%;
+        width: 81.25%;
+    }
+    #advantages div {
+        height: auto;
+        max-height: none;
+        margin-bottom: 3em;
+    }
+    #advantages p,
+    #partners p,
+    #partners div.grid-12,
+    footer {
+        display: none;
+    }
+}
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px) {
+    body {
+        margin: 0;
+        box-shadow: none;
+    }
+    header {
+        height: 75px;
+    }
+    header img {
+        height: 75px;
+        margin-left: 9.37%;
+    }
+    header nav.mini-top-nav,
+    header nav.main-nav {
+        display: none;
+    }
+    #top-focus section.slider {
+        height: 355px;
+    }
+    #top-focus section.slides {
+        height: 325px;
+    }
+    #top-focus div.article-wrapper {
+        height: 325px;
+    }
+    #top-focus a.button {
+        display: none;
+    }
+    #top-focus h1 {
+        font-size: 1.5em;
+        font-weight: 400;
+    }
+    #top-focus section p.grid-10 {
+        font-size: 1.125em;
+    }
+    #top-focus article.article_slide--first p,
+    #top-focus article.article_slide--second p,
+    #top-focus article.article_slide--third p {
+        font-size: 1em;
+    }
+    .slider-arrow {
+        display: none;
+    }
+    .slider-nav {
+        bottom: 8px;
+    }
+    #partners h1.grid-8.push-2 {
+        left: 8.333333333333%;
+        width: 81.25%;
+    }
+    #advantages div {
+        height: auto;
+        max-height: none;
+        margin-bottom: 3em;
+    }
+    #advantages p,
+    #partners p,
+    #partners div.grid-12,
+    footer {
+        display: none;
+    }
 }
 /* @group responsive grid classes */
 

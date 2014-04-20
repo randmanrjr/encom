@@ -10,17 +10,15 @@ $(function(){
         $($this).stop().animate({
             height: "170px",
             width: "170px"
-        }, 50).css({
-            backgroundImage: 'url("img/icon_back_hover.png")',
-            marginBottom: "3em"
+        }, 100).css({
+            backgroundImage: 'url("img/icon_back_hover.png")'
         }).children().attr({
             src: newSrc
         }).css({
-            marginBottom: "4em",
+            marginBottom: "2em",
             position: 'relative',
             top: '21px'
         });
-
     }
 
     function deflateIcon() {
@@ -30,16 +28,21 @@ $(function(){
         $($this).stop().animate({
             height: "128px",
             width: "128px"
-        }, 50).css({
-            backgroundImage: 'url("img/icon_back.png")',
-            marginBottom: "3em"
+        }, 100).css({
+            backgroundImage: 'url("img/icon_back.png")'
         }).children().attr({
             src: newSrc
         }).css({
-            marginBottom: "1em",
+            marginBottom: "0",
             position: 'initial'
         });
     }
 
     $('a.icon').hover(inflateIcon, deflateIcon);
-})
+
+    $('header.mobile-menu').hide();
+
+    $('span.menu-trigger').click(function(){
+        $('header.mobile-menu').slideToggle();
+    })
+});
