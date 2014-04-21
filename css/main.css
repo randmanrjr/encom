@@ -46,6 +46,7 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+/* end reset */
 
 /* Site specific styles */
 html {
@@ -552,26 +553,5 @@ footer nav a {
 .push-11 {left: 91.666666666667%;}
 
 /* @end */
-
-/* values below are in pixels and represent
- the 12 column fractions of the 960 grid system;
- the fluid grid values above are calculated from these */
-
-/* @group pull */
-
-.pull-1 {left: -80px;}
-.pull-2 {left: -160px;}
-.pull-3 {left: -240px;}
-.pull-4 {left: -320px;}
-.pull-5 {left: -400px;}
-.pull-6 {left: -480px;}
-.pull-7 {left: -560px;}
-.pull-8 {left: -640px;}
-.pull-9 {left: -720px;}
-.pull-10 {left: -800px;}
-.pull-11 {left: -880px;}
-
-/* @end */
-
 
 /* @end */

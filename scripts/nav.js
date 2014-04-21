@@ -15,7 +15,7 @@ $(function(){
         }).children('img').attr({
             src: newSrc
         }).css({
-            marginBottom: "32px",
+            marginBottom: "2em",
             position: 'relative',
             top: '21px'
         });
