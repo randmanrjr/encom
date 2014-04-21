@@ -18,6 +18,8 @@ $(function(){
             marginBottom: "2em",
             position: 'relative',
             top: '21px'
+        }).parents('.icon-wrapper').css({
+            verticalAlign: "-2.25em"
         });
     }
 
@@ -35,6 +37,8 @@ $(function(){
         }).css({
             marginBottom: "0",
             position: 'initial'
+        }).parents('.icon-wrapper').css({
+            verticalAlign: "middle"
         });
     }
 
