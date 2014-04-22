@@ -2,7 +2,7 @@
  * Created by randallrodrigues on 4/19/14.
  */
 $(function(){
-
+    //inflate the icons
     function inflateIcon() {
         var $this = $(this);
         var src = $this.children().attr('src');
@@ -22,7 +22,7 @@ $(function(){
             verticalAlign: "-2.5em"
         });
     }
-
+    //deflate the icons
     function deflateIcon() {
         var $this = $(this);
         var src = $this.children().attr('src');
@@ -42,10 +42,41 @@ $(function(){
         });
     }
 
-    $('a.icon').hover(inflateIcon, deflateIcon);
+    //implement icon inflate/deflate in desktop view
+    if ($(window).width() >= 800) {
+        $('a.icon').hover(inflateIcon, deflateIcon);
+    }
 
+    //re-evaluate icon inflate/deflate if window width changes
+    $(window).resize(function(){
+        $('a.icon').off();
+        if ($(window).width() >= 800) {
+            $('a.icon').hover(inflateIcon, deflateIcon);
+        }
+        //enforces correct element size in case of hover before window width changed
+        if ($(window).width() <= 799) {
+            $('a.icon').css({
+                height: '84px',
+                width: '84px'
+            }).children('img').css({
+                height: '84px',
+                width: '84px'
+            });
+        } else {
+            $('a.icon').css({
+                height: '128px',
+                width: '128px'
+            }).children('img').css({
+                height: '128px',
+                width: '128px'
+            });
+        }
+    });
+
+    //re-enforce mobile-menu hidden by default
     $('header.mobile-menu').hide();
 
+    //display mobile-menu when clicked
     $('span.menu-trigger').click(function(){
         $('header.mobile-menu').slideToggle();
     })

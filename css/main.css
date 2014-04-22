@@ -79,6 +79,7 @@ section, hgroup, div {
     text-align: center;
 }
 header span.menu-trigger {
+    cursor: pointer;
     display: none;
 }
 header.mobile-menu {
@@ -482,6 +483,20 @@ footer nav a {
         height: auto;
         max-height: none;
         margin-bottom: 1em;
+    }
+    #advantages div.icon-wrapper {
+        max-height: 120px;
+    }
+    #advantages a.icon {
+        height: 84px;
+        width: 84px;
+        margin-left: 8px;
+        margin-right: 8px;
+        margin-bottom: 0;
+    }
+    #advantages a.icon img {
+        height: 84px;
+        width: 84px;
     }
     #advantages p,
     #partners p,
