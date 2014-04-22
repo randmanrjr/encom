@@ -19,7 +19,7 @@ $(function(){
             position: 'relative',
             top: '21px'
         }).parents('.icon-wrapper').css({
-            verticalAlign: "-2.25em"
+            verticalAlign: "-2.5em"
         });
     }
 
