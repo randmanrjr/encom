@@ -14,7 +14,8 @@ $(function(){
             backgroundImage: 'url("img/icon_back_hover.png")',
             position: 'relative',
             top: '-21px',
-            left: '-21px'
+            left: '-21px',
+            paddingBottom: '4em'
         }).children('img').attr({
             src: newSrc
         }).css({
@@ -35,7 +36,8 @@ $(function(){
             width: "128px"
         }, 100).css({
             backgroundImage: 'url("img/icon_back.png")',
-            position: 'initial'
+            position: 'initial',
+            paddingBottom: '2.5em'
         }).children('img').attr({
             src: newSrc
         }).css({
