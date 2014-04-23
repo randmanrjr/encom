@@ -316,7 +316,7 @@ footer {
     vertical-align: middle;
 }
 #advantages a.icon {
-    display: inline-block;
+    display: block;
     height: 128px;
     width: 128px;
     margin-left: 5px;
