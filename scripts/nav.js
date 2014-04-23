@@ -11,7 +11,10 @@ $(function(){
             height: "170px",
             width: "170px"
         }, 100).css({
-            backgroundImage: 'url("img/icon_back_hover.png")'
+            backgroundImage: 'url("img/icon_back_hover.png")',
+            position: 'relative',
+            top: '-21px',
+            left: '-21px'
         }).children('img').attr({
             src: newSrc
         }).css({
@@ -19,7 +22,7 @@ $(function(){
             position: 'relative',
             top: '21px'
         }).parents('.icon-wrapper').css({
-            verticalAlign: "-2.5em"
+            verticalAlign: "middle"
         });
     }
     //deflate the icons
@@ -31,7 +34,8 @@ $(function(){
             height: "128px",
             width: "128px"
         }, 100).css({
-            backgroundImage: 'url("img/icon_back.png")'
+            backgroundImage: 'url("img/icon_back.png")',
+            position: 'initial'
         }).children('img').attr({
             src: newSrc
         }).css({

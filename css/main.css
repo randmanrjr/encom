@@ -296,32 +296,33 @@ footer {
     padding-top: 1px;
     text-align: center;
 }
-#advantages div {
-    text-align: center;
-    margin-bottom: 1em;
-    height: 100%;
-    max-height: 200px;
-}
 #advantages h1 {
     margin-top: 2em;
     margin-bottom: 2em;
     font-weight: 600;
     text-align: center;
 }
-#advantages div.icon-wrapper {
-    display: inline-block;
+#advantages div.icons {
+    text-align: center;
+    margin-bottom: 1em;
     height: 100%;
     max-height: 200px;
+}
+#advantages div.icon-wrapper {
+    display: inline-block;
+    width: 148px;
+    height: 200px;
     margin-bottom: 1em;
     vertical-align: middle;
 }
 #advantages a.icon {
-    display: block;
+    display: inline-block;
+    vertical-align: middle;
     height: 128px;
     width: 128px;
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-bottom: 2em;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-bottom: 2.5em;
     text-align: center;
     background-image: url("../img/icon_back.png");
     background-size: 100%;
@@ -479,13 +480,14 @@ footer nav a {
         left: 8.333333333333%;
         width: 81.25%;
     }
-    #advantages div {
+    #advantages div.icons {
         height: auto;
         max-height: none;
         margin-bottom: 1em;
     }
     #advantages div.icon-wrapper {
         max-height: 120px;
+        width: auto;
     }
     #advantages a.icon {
         height: 84px;
