@@ -22,8 +22,6 @@ $(function(){
             marginBottom: "2em",
             position: 'relative',
             top: '21px'
-        }).parents('.icon-wrapper').css({
-            verticalAlign: "middle"
         });
     }
     //deflate the icons
@@ -43,8 +41,6 @@ $(function(){
         }).css({
             marginBottom: "0",
             position: 'initial'
-        }).parents('.icon-wrapper').css({
-            verticalAlign: "middle"
         });
     }
 
